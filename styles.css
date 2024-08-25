@@ -155,7 +155,7 @@ nav {
 	h1 {
 		font-weight: 500;
 	}
-	embed {
+	img {
 		max-width: 349px;
 		/* hr.svg contain an image, width is 349px */
 		width: 100%;
@@ -216,7 +216,7 @@ nav {
 		padding: 0.4rem 2rem;
 		border-radius: 3px;
 	}
-	.add-to-cart embed {
+	.add-to-cart img {
 		margin: 0.5rem;
 		width: 20px;
 		height: auto;

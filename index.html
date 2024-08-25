@@ -10,6 +10,23 @@
 			href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
 		/>
 		<link rel="stylesheet" href="styles.css" />
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				const btnBurger = document.getElementById("btn-burger");
+				const bottomNav = document.querySelector(".bottom-nav");
+				const navLinks = bottomNav.querySelectorAll("a");
+
+				btnBurger.addEventListener("click", function () {
+					bottomNav.classList.toggle("active");
+				});
+
+				navLinks.forEach((link) => {
+					link.addEventListener("click", function () {
+						bottomNav.classList.remove("active");
+					});
+				});
+			});
+		</script>
 	</head>
 	<body>
 		<!-- navbar -->
@@ -43,27 +60,24 @@
 					</div>
 				</div>
 				<button id="btn-burger">
-					<embed
-						src="Assets/icons/burger-icon.svg"
-						type="image/svg+xml"
-					/>
+					<img src="Assets/icons/burger-icon.svg" alt="burger icon" />
 				</button>
 			</div>
 			<div class="bottom-nav">
-				<a href="#">Home</a>
-				<a href="#">About us</a>
-				<a href="#">Products</a>
-				<a href="#">Blog</a>
+				<a href="#home">Home</a>
+				<a href="#about">About us</a>
+				<a href="#product">Products</a>
+				<a href="#blog">Blog</a>
 				<a href="#">Shop</a>
-				<a href="#">Services</a>
+				<a href="#services">Services</a>
 				<a href="#">Gallery</a>
-				<a href="#">Contact us</a>
+				<a href="#contact">Contact us</a>
 			</div>
 		</nav>
 		<!-- main -->
 		<main>
 			<!-- hero part -->
-			<div class="hero-container container">
+			<div class="hero-container container" id="home">
 				<div class="left">
 					<div class="greeting">
 						<span>Welcome to</span>
@@ -92,7 +106,7 @@
 				</div>
 			</div>
 			<!-- Top Products -->
-			<div class="top-products container">
+			<div class="top-products container" id="products">
 				<div class="container-header">
 					<h1>Top Products</h1>
 					<embed src="Assets/icons/hr.svg" type="image/svg+xml" />
@@ -215,7 +229,7 @@
 				</div>
 			</div>
 			<!-- About Fresh Meal -->
-			<div class="fresh-meal container">
+			<div class="fresh-meal container" id="blog">
 				<div class="container-header">
 					<h1>About Fresh Meal</h1>
 					<embed src="Assets/icons/hr.svg" type="image/svg+xml" />
@@ -241,7 +255,7 @@
 				</div>
 			</div>
 			<!-- Our Services -->
-			<div class="our-services container">
+			<div class="our-services container" id="services">
 				<div class="container-header">
 					<h1>Our Services</h1>
 					<embed src="Assets/icons/hr.svg" type="image/svg+xml" />
@@ -356,7 +370,7 @@
 				</div>
 			</div>
 			<!-- contact us and map -->
-			<div class="reach-us">
+			<div class="reach-us" id="contact">
 				<div class="contact-us container">
 					<div class="container-header">
 						<h1>Contact us</h1>
@@ -411,7 +425,7 @@
 
 		<footer>
 			<div class="top container">
-				<div class="about-us">
+				<div class="about-us" id="about">
 					<h4 class="header">About us</h4>
 					<p>
 						Lorem ipsum, dolor sit amet consectetur adipisicing
@@ -422,15 +436,15 @@
 				</div>
 				<div class="quick-links">
 					<h4 class="header">Quick Links</h4>
-					<ul>
-						<li>Home</li>
-						<li>About us</li>
-						<li>Products</li>
-						<li>Blog</li>
-						<li>Services</li>
-						<li>Gallery</li>
-						<li>Contact us</li>
-					</ul>
+					<div class="links">
+						<a href="#home">Home</a>
+						<a href="#about">About us</a>
+						<a href="#product">Products</a>
+						<a href="#blog">Blog</a>
+						<a href="#services">Services</a>
+						<a href="#">Gallery</a>
+						<a href="#contact">Contact us</a>
+					</div>
 				</div>
 				<div class="follow-us">
 					<h4 class="header">Follow Us</h4>
